@@ -32,6 +32,10 @@ export default function (
             return;
           }
 
+          if (!rule) {
+            return;
+          }
+
           if (!foundContentDocsPlugin && rule.use && rule.include) {
             const includesArray = rule.include as RuleSetCondition[];
             const useArray = rule.use as RuleSetUseItem[];
